@@ -3,17 +3,11 @@ present=1
 absent=0
 workingHours=8
 wagePerhour=20
-read -p "Enter number to check employee is present or absent:: " n
+n=1
 case $n in
-	0)echo "Employee is absent"
-		;;
-
-	1)echo "Employee is full time present"
+	1)echo "Calculating wages per month"
 	wages=$(($workingHours*$wagePerhour))
-	echo "Full time wage:: " $wages
-		;;
-	2)echo "Employee is part time present"
-	wages=$(($workingHours*$wagePerhour))
-	echo "part time wage:: " $wages
+	result=$(($wages*20))
+	echo "Wages per month:: " $result
 		;;
 esac
