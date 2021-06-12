@@ -3,6 +3,7 @@ wagesPerHours=20
 workingHoursPerday=8
 for ((counter=1; counter<=20; counter++)) 
 do
+	echo "number of day:: " $counter
 	dailyWage=$(($wagesPerHours*$workingHoursPerday))
 	echo "daily wage:: " $dailyWage
 	totalWage=$(($dailyWage*$counter))
