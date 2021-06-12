@@ -1,2 +1,9 @@
 #!/bin/bash -x
-echo "Welcome to Employee wage computation program on Master Branch"
+absent=0
+read -p "Enter number to check employee is present or absent:: " n
+if [ $n -eq 0 ]
+	then
+	echo "Employee is absent"
+	else
+	echo "Employee is present"
+fi
