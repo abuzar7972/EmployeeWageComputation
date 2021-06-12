@@ -3,11 +3,14 @@ present=1
 absent=0
 workingHours=8
 wagePerhour=20
+read -p "Enter working hours:: " totalWorkingHours
 n=1
-case $n in
-	1)echo "Calculating wages per month"
+if [ $totalWorkingHours -eq 100 ]
+	then
+	echo "Calculating wages per month"
 	wages=$(($workingHours*$wagePerhour))
 	result=$(($wages*20))
 	echo "Wages per month:: " $result
-		;;
-esac
+	else
+	echo "Working hours are remaining"
+fi
