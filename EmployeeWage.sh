@@ -1,7 +1,10 @@
 #!/bin/bash -x
-function workingHours()
-{
-	echo "Total working hours:: $totalWorkingHours "
-}
-read -p "Enter working hours:: " totalWorkingHours
-workingHours $totalWorkingHours
+wagesPerHours=20
+workingHoursPerday=8
+for ((counter=1; counter<=20; counter++)) 
+do
+	dailyWage=$(($wagesPerHours*$workingHoursPerday))
+	echo "daily wage:: " $dailyWage
+	totalWage=$(($dailyWage*$counter))
+	echo "total wage:: " $totalWage
+done
